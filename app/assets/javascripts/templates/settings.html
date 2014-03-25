@@ -1,1 +1,44 @@
-<h1>Settings</h1>
+<div class="row">
+
+  <h1>Update Settings</h1>
+
+  <form name="form">
+    <fieldset>
+
+      <legend>Update Settings</legend>
+
+      <div class="row">
+        <div class="small-8 columns">
+          <input type="text" placeholder="Name" name="name" required ng-model="settings.name" ng-minlength=2 ng-maxlength=20 ng-pattern="/^[a-zA-Z]+$/" />
+          <div ng-show="form.name.$dirty && form.name.$invalid">
+            <div ng-show="form.name.$error.required">This is totes required</div>
+            <div ng-show="form.name.$error.minlength">Totes too short</div>
+            <div ng-show="form.name.$error.maxlength">Totes too long</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="small-8 columns">
+          <input type="email" placeholder="Email" name="email" ng-model="settings.email" />
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="small-8 columns">
+          <input type="number" placeholder="Age" name="age" ng-model="settings.age" />
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="push-9 small-3">
+          <button type="submit" class="button">Update</button>
+        </div>
+      </div>
+
+    </fieldset>
+  </form>
+
+</div>
+
+{{ settings }}
