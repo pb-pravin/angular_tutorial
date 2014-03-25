@@ -3,11 +3,19 @@ var app = angular.module("myApp", ["ngRoute"]);
 app.config(function($routeProvider){
   $routeProvider.when('/', {
     templateUrl: "/assets/templates/home.html",
-    controller: "homeController"
+    controller: "HomeController"
+  })
+  .when('/settings', {
+    templateUrl: "/assets/templates/settings.html",
+    controller: "SettingsController"
   })
   .otherwise({ redirectTo: "/" });
 });
 
-app.controller("homeController", function() {
-  
+app.controller("HomeController", function() {
+
+});
+
+app.controller("SettingsController", function() {
+
 });

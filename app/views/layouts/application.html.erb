@@ -22,11 +22,11 @@
   </head>
 
   <body ng-app="myApp">
+    <%= render "shared/nav" %>
     <div ng-view></div>
     <%= yield %>
 
-    
+
     <%= javascript_include_tag "application" %>
   </body>
 </html>
-
